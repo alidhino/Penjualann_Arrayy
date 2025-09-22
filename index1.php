@@ -19,3 +19,18 @@ for ($i = 0; $i < 5; $i++) {
     $jumlah[] = rand(1, 5);
     $total[] = 0;
 }
+
+// Commit 3 – Perhitungan total
+foreach ($beli as $key => $barang) {
+    $harga = $harga_barang[array_search($barang, $nama_barang)];
+    $total[$key] = $harga * $jumlah[$key];
+    $grandtotal += $total[$key];
+
+    echo "Nama Barang : " . $barang . "<br>";
+    echo "Harga Barang : " . $harga . "<br>";
+    echo "Jumlah Beli : " . $jumlah[$key] . "<br>";
+    echo "Total Harga : " . $total[$key] . "<br><br>";
+}
+
+
+?>
